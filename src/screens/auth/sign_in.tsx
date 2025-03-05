@@ -1,15 +1,21 @@
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import Logo from "../../assets/dormly-high-resolution-logo-transparent.png";
 import { usePasswordStore } from "../../stores/password_store";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLoadingStore } from "../../stores/loading_store";
 
 export default () => {
   const passwordState = usePasswordStore();
+  const loadingStore = useLoadingStore();
+  const navigate = useNavigate();
+
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="p-5 w-[550px] border-2 border-gray-300">
         <div className="mb-[2em]">
-          <img srcSet={Logo} className="w-[5em] mb-[1em]" />
+          <Link to={"/"}>
+            <img srcSet={Logo} className="w-[5em] mb-[1em]" />
+          </Link>
           <p className="text-xl text-gray-600 font-semibold">Welcome back</p>
           <p className="text-sm text-gray-500">Please signin to continue.</p>
         </div>
@@ -47,12 +53,17 @@ export default () => {
           </div>
 
           <div>
-            <button className=" text-white spoof-font w-full border-2 p-2  hover:bg-blue-800 bg-blue-700 hover:text-white border-blue-600 text-sm">
+            <button
+              onClick={() => {
+                Signin();
+              }}
+              className=" text-white spoof-font w-full border-2 p-2  hover:bg-blue-800 bg-blue-700 hover:text-white border-blue-600 text-sm"
+            >
               Signin
             </button>
           </div>
         </div>
-         <div className="mt-[1em]">
+        <div className="mt-[1em]">
           <p className="text-sm">
             {" "}
             Don't have an account?{" "}
@@ -64,4 +75,13 @@ export default () => {
       </div>
     </div>
   );
+
+  function Signin() {
+    loadingStore.setLoading(true);
+    loadingStore.setLoadingMessage("Please wait...");
+    setTimeout(() => {
+      loadingStore.setLoading(false);
+      navigate("/listings")
+    }, 3500);
+  }
 };

@@ -74,3 +74,53 @@ function FeatureView({
     </div>
   );
 }
+
+function NewApartments({
+  image,
+  title,
+  details,
+  id,
+}: {
+  image: string;
+  title: string;
+  details: string;
+  id: string;
+}) {
+  return (
+    <div className="flex shadow-md border-2 border-gray-200 w-[17em] flex-col">
+      <div className="flex-[1] overflow-hidden">
+        <img
+          srcSet={image}
+          className="rounded-t w-full h-[12em] object-cover"
+        />
+      </div>
+      <div className="py-2 px-2">
+        <p className="text-sm">{title}</p>
+        <p className="text-gray-500 text-xs py-1">{details}</p>
+        <div className="flex mt-1.5 flex-wrap">
+          <FeatureView
+            icon={<FaLightbulb className="text-[0.5em] text-gray-600" />}
+            feature_name=""
+          />
+          <FeatureView
+            icon={<FaWifi className="text-[0.5em] text-gray-600" />}
+            feature_name="" 
+          />
+          <FeatureView
+            icon={<FaSpoon className="text-[0.5em] text-gray-600" />}
+            feature_name=""
+          />
+          <FeatureView
+            icon={<FaFan className="text-[0.5em] text-gray-600" />}
+            feature_name=""
+          />
+          <FeatureView
+            icon={<FaPeopleGroup className="text-[0.5em] text-gray-600" />}
+            feature_name=""  
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+export { NewApartments };

@@ -2,7 +2,6 @@ import Apartment_card from "../../components/apartment_card";
 import ApartmentImage from "../../assets/IMG-20250121-WA0065.jpg";
 import ApartmentImage2 from "../../assets/IMG-20250121-WA0066.jpg";
 import Service_card from "../../components/service_card";
-import { FaLocationPin } from "react-icons/fa6";
 import { MdEmail, MdOutlineMyLocation, MdPerson } from "react-icons/md";
 import { Link } from "react-router-dom";
 //
@@ -36,7 +35,10 @@ function HeroSection() {
         <p className="text-[4em] font-bold">
           Affordable housing at your location...
         </p>
-        <Link to={"/signup"} className="bg-transparent hover-btn mb-[0.8em] text-lg  rounded-none border-2 border-white px-3 py-1">
+        <Link
+          to={"/signup"}
+          className="bg-transparent hover-btn mb-[0.8em] text-lg  rounded-none border-2 border-white px-3 py-1"
+        >
           Get started
         </Link>
       </div>
@@ -53,10 +55,10 @@ function LodgeAdvert() {
             Find apartments at your desired location
           </p>
           <p className="text-center mb-[1em]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            ullam fugit magnam vel, quibusdam ducimus in voluptatum modi,
-            excepturi eum cumque vitae omnis officia ea unde quidem aliquam illo
-            quaerat. Facere.
+            Explore our wide selection of comfortable and affordable apartments
+            in prime locations. Whether you're looking for a cozy studio or a
+            spacious family-sized unit, we have options to suit your needs and
+            budget.
           </p>
           <div className="w-[3em] mb-[0.5em] bg-blue-700 h-[2px]"></div>
         </div>
@@ -116,15 +118,39 @@ function FeaturesAdvertSection() {
           <div className="w-[3em] mb-[0.5em] bg-white h-[2px]"></div>
         </div>
         <div className="flex flex-wrap ">
-            <Service_card icon={<MdOutlineMyLocation />} description={<p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit exercitationem molestias accusantium enim eos fuga ipsum repellat unde ipsam!
-            </p>} title="Location Based searches"/>
-            <Service_card icon={<MdEmail />} description={<p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit exercitationem molestias accusantium enim eos fuga ipsum repellat unde ipsam!
-            </p>} title="Email reachout"/>
-            <Service_card icon={<MdPerson />} description={<p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit exercitationem molestias accusantium enim eos fuga ipsum repellat unde ipsam!
-            </p>} title="Personalized Viewpoint"/>
+          <Service_card
+            icon={<MdOutlineMyLocation />}
+            description={
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur fugit exercitationem molestias accusantium enim eos
+                fuga ipsum repellat unde ipsam!
+              </p>
+            }
+            title="Location Based searches"
+          />
+          <Service_card
+            icon={<MdEmail />}
+            description={
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur fugit exercitationem molestias accusantium enim eos
+                fuga ipsum repellat unde ipsam!
+              </p>
+            }
+            title="Email reachout"
+          />
+          <Service_card
+            icon={<MdPerson />}
+            description={
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur fugit exercitationem molestias accusantium enim eos
+                fuga ipsum repellat unde ipsam!
+              </p>
+            }
+            title="Personalized Viewpoint"
+          />
         </div>
       </div>
     </div>

@@ -4,16 +4,21 @@ import {
   usePasswordStore,
   repeatUsePasswordStore,
 } from "../../stores/password_store";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLoadingStore } from "../../stores/loading_store";
 
 export default () => {
   const passwordState = usePasswordStore();
+  const navigate = useNavigate();
+  const loadingStore = useLoadingStore();
   const repeatPasswordState = repeatUsePasswordStore();
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="p-5 w-[550px] border-2 border-gray-300">
         <div className="mb-[2em]">
+          <Link to={"/"} >
           <img srcSet={Logo} className="w-[5em] mb-[1em]" />
+          </Link>
           <p className="text-xl text-gray-600 font-semibold">Join us</p>
           <p className="text-sm text-gray-500">
             Get location based housing with us.
@@ -87,7 +92,12 @@ export default () => {
           </div>
 
           <div>
-            <button className=" text-white spoof-font w-full border-2 p-2  hover:bg-blue-800 bg-blue-700 hover:text-white border-blue-600 text-sm">
+            <button
+              onClick={() => {
+                Signup();
+              }}
+              className=" text-white spoof-font w-full border-2 p-2  hover:bg-blue-800 bg-blue-700 hover:text-white border-blue-600 text-sm"
+            >
               Signup
             </button>
           </div>
@@ -104,4 +114,13 @@ export default () => {
       </div>
     </div>
   );
+
+  function Signup() {
+    loadingStore.setLoading(true);
+    loadingStore.setLoadingMessage("Signing up...");
+    setTimeout(() => {
+      loadingStore.setLoading(false);
+      navigate("/listings")
+    }, 6000);
+  }
 };
