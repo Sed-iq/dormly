@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useState, useEffect, useRef } from "react";
 import { ArrowLeftCircle } from "lucide-react";
 import { FaCamera, FaUser, FaEdit, FaSave, FaTimes } from "react-icons/fa";

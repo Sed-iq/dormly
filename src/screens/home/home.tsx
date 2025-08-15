@@ -3,18 +3,12 @@ import {
   MapPin,
   Bed,
   Bath,
-  Wifi,
-  Car,
-  Shield,
   Star,
   ArrowLeft,
-  CreditCard,
   Phone,
   Mail,
   User,
-  Calendar,
   Building,
-  User2,
 } from "lucide-react";
 import Lodge1 from "../../assets/Fno9IaEXgAAFtn1.jpeg";
 import Lodge2 from "../../assets/Fno9IaEXoAIdAUJ.jpeg";
@@ -35,6 +29,7 @@ import IMG20250815WA0001 from "../../assets/images/IMG-20250815-WA0001.jpg";
 import IMG20250815WA0007 from "../../assets/images/IMG-20250815-WA0007.jpg";
 import IMG20250815WA0008 from "../../assets/images/IMG-20250815-WA0008.jpg";
 import IMG20250815WA0009 from "../../assets/images/IMG-20250815-WA0009.jpg";
+
 import { Link } from "react-router-dom";
 import PaymentFlow from "./payment_flow";
 
@@ -205,8 +200,10 @@ const DormlyApp: React.FC = () => {
 
   useEffect(() => {
     const cache = localStorage.getItem("profile-details");
-    setProfile(JSON.parse(cache ?? ""));
-    console.log(profile_details);
+    console.log(cache == null);
+    if (cache != null) setProfile(JSON.parse(cache));
+    setProfile(null);
+    // console.log(profile_details);
   }, []);
 
   const formatCurrency = (amount: number) => {

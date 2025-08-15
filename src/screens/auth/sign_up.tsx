@@ -7,6 +7,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useLoadingStore } from "../../stores/loading_store";
 import { useState } from "react";
+import IMG0250815WA0016 from "../../assets/images/IMG-20250815-WA0016.jpg";
 
 export default () => {
   const passwordState = usePasswordStore();
@@ -24,8 +25,15 @@ export default () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="p-5 w-[550px] border-2 border-gray-300">
+    <div
+      style={{
+        background: `url(${IMG0250815WA0016}) center`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+      className="flex h-screen items-center justify-center"
+    >
+      <div className="p-5 w-[550px] bg-white rounded border-2 border-gray-300">
         <div className="mb-[2em]">
           <Link to={"/"}>
             <img srcSet={Logo} className="w-[5em] mb-[1em]" />
