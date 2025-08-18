@@ -29,6 +29,28 @@ import IMG20250815WA0001 from "../../assets/images/IMG-20250815-WA0001.jpg";
 import IMG20250815WA0007 from "../../assets/images/IMG-20250815-WA0007.jpg";
 import IMG20250815WA0008 from "../../assets/images/IMG-20250815-WA0008.jpg";
 import IMG20250815WA0009 from "../../assets/images/IMG-20250815-WA0009.jpg";
+import IMG20250816WA0000 from "../../assets/images/IMG-20250816-WA0000.jpg";
+import IMG20250816WA0042 from "../../assets/images/IMG-20250816-WA0042.jpg";
+import IMG20250816WA0043 from "../../assets/images/IMG-20250816-WA0043.jpg";
+import IMG20250816WA0044 from "../../assets/images/IMG-20250816-WA0044.jpg";
+import IMG20250816WA0045 from "../../assets/images/IMG-20250816-WA0045.jpg";
+import IMG20250816WA0046 from "../../assets/images/IMG-20250816-WA0046.jpg";
+import IMG20250816WA0047 from "../../assets/images/IMG-20250816-WA0047.jpg";
+import IMG20250816WA0048 from "../../assets/images/IMG-20250816-WA0048.jpg";
+import IMG20250816WA0049 from "../../assets/images/IMG-20250816-WA0049.jpg";
+import IMG20250816WA0050 from "../../assets/images/IMG-20250816-WA0050.jpg";
+import IMG20250816WA0051 from "../../assets/images/IMG-20250816-WA0051.jpg";
+import IMG20250816WA0052 from "../../assets/images/IMG-20250816-WA0052.jpg";
+import IMG20250816WA0053 from "../../assets/images/IMG-20250816-WA0053.jpg";
+import IMG20250816WA0054 from "../../assets/images/IMG-20250816-WA0054.jpg";
+import IMG20250816WA0055 from "../../assets/images/IMG-20250816-WA0055.jpg";
+import IMG20250816WA0056 from "../../assets/images/IMG-20250816-WA0056.jpg";
+import IMG20250816WA0057 from "../../assets/images/IMG-20250816-WA0057.jpg";
+import IMG20250816WA0058 from "../../assets/images/IMG-20250816-WA0058.jpg";
+import IMG20250816WA0059 from "../../assets/images/IMG-20250816-WA0059.jpg";
+import IMG20250816WA0060 from "../../assets/images/IMG-20250816-WA0060.jpg";
+import IMG20250816WA0061 from "../../assets/images/IMG-20250816-WA0061.jpg";
+import IMG20250816WA0062 from "../../assets/images/IMG-20250816-WA0062.jpg";
 
 import { Link } from "react-router-dom";
 import PaymentFlow from "./payment_flow";
@@ -63,7 +85,7 @@ const mockLodges: Lodge1[] = [
   {
     id: "1",
     name: "Royal Heights Lodge",
-    location: "Anyigba Kogi State",
+    location: "Anyigba, Kogi State",
     yearlyRent: 150000,
     images: [IMG20250305WA0040, IMG20250305WA0041, IMG20250305WA0042],
     bedrooms: 2,
@@ -78,7 +100,7 @@ const mockLodges: Lodge1[] = [
   {
     id: "2",
     name: "Elite Student Suites",
-    location: "Anyigba Kogi State",
+    location: "Anyigba, Kogi State",
     yearlyRent: 170000,
     images: [IMG20250305WA0043, IMG20250305WA0044, IMG20250305WA0045],
     bedrooms: 1,
@@ -92,7 +114,7 @@ const mockLodges: Lodge1[] = [
   {
     id: "3",
     name: "Campus View Lodge",
-    location: "Anyigba Kogi State",
+    location: "Anyigba, Kogi State",
     yearlyRent: 280000,
     images: [IMG20250305WA0046, IMG20250305WA0047, IMG20250305WA0048],
     bedrooms: 3,
@@ -107,7 +129,7 @@ const mockLodges: Lodge1[] = [
   {
     id: "4",
     name: "Premium Student Residence",
-    location: "Anyigba Kogi State",
+    location: "Anyigba, Kogi State",
     yearlyRent: 200000,
     images: [IMG20250305WA0049, IMG20250815WA0001, IMG20250815WA0007],
     bedrooms: 2,
@@ -121,7 +143,7 @@ const mockLodges: Lodge1[] = [
   {
     id: "5",
     name: "Comfort Lodge",
-    location: "Anyigba Kogi State",
+    location: "Anyigba, Kogi State",
     yearlyRent: 120000,
     images: [IMG20250815WA0008, IMG20250815WA0009],
     bedrooms: 1,
@@ -134,6 +156,112 @@ const mockLodges: Lodge1[] = [
   },
   {
     id: "6",
+    name: "Serenity Heights Lodge",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 180000,
+    images: [IMG20250816WA0042, IMG20250816WA0043, IMG20250816WA0044],
+    bedrooms: 2,
+    bathrooms: 2,
+    amenities: ["WiFi", "Security", "Parking", "Generator", "Water Supply"],
+    rating: 4.5,
+    description:
+      "Modern student accommodation with excellent facilities near University.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "7",
+    name: "Scholar's Residence",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 190000,
+    images: [IMG20250816WA0045, IMG20250816WA0046, IMG20250816WA0047],
+    bedrooms: 1,
+    bathrooms: 1,
+    amenities: ["WiFi", "Security", "Study Room", "Laundry"],
+    rating: 4.2,
+    description: "Comfortable single rooms perfect for focused studying.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "8",
+    name: "University Gardens Lodge",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 220000,
+    images: [IMG20250816WA0048, IMG20250816WA0049, IMG20250816WA0050],
+    bedrooms: 2,
+    bathrooms: 1,
+    amenities: ["WiFi", "Security", "Parking", "Kitchen", "Garden"],
+    rating: 4.3,
+    description: "Beautiful lodge with garden views and modern amenities.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "9",
+    name: "Executive Student Suites",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 250000,
+    images: [IMG20250816WA0051, IMG20250816WA0052, IMG20250816WA0053],
+    bedrooms: 2,
+    bathrooms: 2,
+    amenities: [
+      "WiFi",
+      "Security",
+      "Parking",
+      "Generator",
+      "Water Supply",
+      "Air Conditioning",
+    ],
+    rating: 4.6,
+    description: "Luxurious student accommodation with premium facilities.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "10",
+    name: "Harmony Lodge",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 160000,
+    images: [IMG20250816WA0054, IMG20250816WA0055, IMG20250816WA0056],
+    bedrooms: 1,
+    bathrooms: 1,
+    amenities: ["WiFi", "Security", "Study Room", "Kitchen"],
+    rating: 4.0,
+    description: "Peaceful and comfortable accommodation for students.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "11",
+    name: "Academic Heights",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 240000,
+    images: [IMG20250816WA0057, IMG20250816WA0058, IMG20250816WA0059],
+    bedrooms: 3,
+    bathrooms: 2,
+    amenities: ["WiFi", "Security", "Parking", "Kitchen", "Study Room"],
+    rating: 4.4,
+    description: "Spacious accommodation perfect for group living.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "12",
+    name: "Student Paradise Lodge",
+    location: "Anyigba, Kogi State",
+    yearlyRent: 210000,
+    images: [IMG20250816WA0060, IMG20250816WA0061, IMG20250816WA0062],
+    bedrooms: 2,
+    bathrooms: 1,
+    amenities: ["WiFi", "Security", "Generator", "Water Supply", "Laundry"],
+    rating: 4.3,
+    description: "Well-equipped lodge with all essential amenities.",
+    university: "Prince Abubakar Audu University",
+    available: true,
+  },
+  {
+    id: "13",
     name: "Royal Heights Lodge",
     location: "Anyigba Kogi State",
     yearlyRent: 150000,
@@ -148,7 +276,7 @@ const mockLodges: Lodge1[] = [
     available: true,
   },
   {
-    id: "7",
+    id: "14",
     name: "Elite Student Suites",
     location: "Anyigba Kogi State",
     yearlyRent: 170000,
